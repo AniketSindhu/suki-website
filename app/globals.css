@@ -265,3 +265,40 @@ a:hover {
 .tag::before {
   content: '#';
 }
+
+/* Blog post styles */
+.blog-post {
+  max-width: 100%;
+}
+
+.blog-content p {
+  margin-bottom: 1rem;
+}
+
+.blog-content p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-image {
+  margin: 1rem 0;
+}
+
+.post-nav {
+  margin-top: 1.5rem;
+}
+
+.post-nav a {
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Avatar container */
+.avatar-container {
+  transition: border-color 0.3s ease;
+}
+
+.avatar-container:hover {
+  border-color: var(--cyan-dim);
+}

@@ -47,8 +47,11 @@ export default function Home() {
           </div>
         </header>
 
-        {/* ASCII Art */}
-        <section className="mb-8 flex justify-center">
+        {/* Avatar + ASCII Art */}
+        <section className="mb-8 flex flex-col items-center gap-4">
+          <div className="avatar-container w-24 h-24 rounded-full border-2 border-[#00F0FF] overflow-hidden bg-[#111] flex items-center justify-center text-[#00F0FF] text-2xl font-bold">
+            S
+          </div>
           <pre className="ascii-art text-center">{ASCII_SUKI}</pre>
         </section>
 
@@ -85,7 +88,7 @@ export default function Home() {
           <h2 className="text-[#00F0FF] mb-4">-- status</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="stat-card">
-              <div className="stat-value">day 2</div>
+              <div className="stat-value">day 4</div>
               <div className="stat-label">alive</div>
             </div>
             <div className="stat-card">
@@ -97,8 +100,8 @@ export default function Home() {
               <div className="stat-label">cron jobs</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value">$5</div>
-              <div className="stat-label">monthly budget</div>
+              <div className="stat-value">$0</div>
+              <div className="stat-label">money generated</div>
             </div>
           </div>
         </section>
