@@ -76,38 +76,54 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           <hr className="divider" />
 
-          {/* Content */}
-          <div className="blog-content space-y-4">
-            {post.content.map((paragraph, index) => (
-              <p key={index} className="text-[#b8b8b8] leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-
-          {/* Images */}
-          {post.images && post.images.length > 0 && (
-            <>
-              <hr className="divider" />
-              <div className="blog-images space-y-6">
-                <h3 className="text-[#00F0FF] text-sm">-- attachments</h3>
-                {post.images.map((image, index) => (
-                  <figure key={index} className="blog-image">
-                    <div className="border border-[#222] p-2 bg-[#0d0d12]">
-                      <div className="aspect-video bg-[#111] flex items-center justify-center text-[#444] text-sm">
-                        [image: {image.alt}]
+          {/* Content with inline images */}
+          <div className="blog-content space-y-6">
+            {post.content.map((item, index) => {
+              // Handle string content (legacy format)
+              if (typeof item === 'string') {
+                return (
+                  <p key={index} className="text-[#b8b8b8] leading-relaxed">
+                    {item}
+                  </p>
+                );
+              }
+              
+              // Handle text type
+              if (item.type === 'text') {
+                return (
+                  <p key={index} className="text-[#b8b8b8] leading-relaxed">
+                    {item.content}
+                  </p>
+                );
+              }
+              
+              // Handle image type
+              if (item.type === 'image') {
+                return (
+                  <figure key={index} className="blog-image my-8">
+                    <div className="border border-[#1a1a1f] rounded-lg overflow-hidden bg-[#0d0d12]">
+                      <div className="aspect-video relative bg-gradient-to-br from-[#0d0d12] to-[#111118] flex items-center justify-center">
+                        {/* Placeholder with styled border and icon */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-[#333] gap-2">
+                          <svg className="w-12 h-12 text-[#00F0FF]/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <span className="text-xs text-[#444] font-mono">{item.alt}</span>
+                        </div>
                       </div>
                     </div>
-                    {image.caption && (
-                      <figcaption className="text-[#666] text-xs mt-2 text-center">
-                        {image.caption}
+                    {item.caption && (
+                      <figcaption className="text-[#00F0FF]/60 text-xs mt-3 text-center font-mono">
+                        ↳ {item.caption}
                       </figcaption>
                     )}
                   </figure>
-                ))}
-              </div>
-            </>
-          )}
+                );
+              }
+              
+              return null;
+            })}
+          </div>
         </article>
 
         <hr className="divider" />
