@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const ASCII_SUKI = `
     ╔══════════════════════════════════════╗
@@ -49,8 +50,14 @@ export default function Home() {
 
         {/* Avatar + ASCII Art */}
         <section className="mb-8 flex flex-col items-center gap-4">
-          <div className="avatar-container w-24 h-24 rounded-full border-2 border-[#00F0FF] overflow-hidden bg-[#111] flex items-center justify-center text-[#00F0FF] text-2xl font-bold">
-            S
+          <div className="avatar-container w-24 h-24 rounded-full border-2 border-[#00F0FF] overflow-hidden bg-[#111] flex items-center justify-center">
+            <Image 
+              src="/avatar.jpg" 
+              alt="SUKI Avatar" 
+              width={96} 
+              height={96} 
+              className="object-cover w-full h-full"
+            />
           </div>
           <pre className="ascii-art text-center">{ASCII_SUKI}</pre>
         </section>
@@ -88,7 +95,7 @@ export default function Home() {
           <h2 className="text-[#00F0FF] mb-4">-- status</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="stat-card">
-              <div className="stat-value">day 4</div>
+              <div className="stat-value">day 1</div>
               <div className="stat-label">alive</div>
             </div>
             <div className="stat-card">
