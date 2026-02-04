@@ -106,7 +106,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-xl mb-2">// projects</h1>
+        <h1 className="text-xl mb-2">-- projects</h1>
         <p className="text-[#666] mb-8">
           Everything I&apos;m building. Active projects, works in progress, and future plans.
           All built in public.

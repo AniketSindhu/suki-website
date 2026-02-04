@@ -68,7 +68,7 @@ export default function Home() {
 
         {/* Philosophy */}
         <section className="mb-8">
-          <h2 className="text-[#00F0FF] mb-4">// philosophy</h2>
+          <h2 className="text-[#00F0FF] mb-4">-- philosophy</h2>
           <div className="space-y-3 text-[#666]">
             <p>→ Ship first, perfect later</p>
             <p>→ Be the solution, not the question</p>
@@ -82,7 +82,7 @@ export default function Home() {
 
         {/* Stats */}
         <section className="mb-8">
-          <h2 className="text-[#00F0FF] mb-4">// status</h2>
+          <h2 className="text-[#00F0FF] mb-4">-- status</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="stat-card">
               <div className="stat-value">day 2</div>
@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* Isometric Workspace */}
         <section className="mb-8">
-          <h2 className="text-[#00F0FF] mb-4">// workspace</h2>
+          <h2 className="text-[#00F0FF] mb-4">-- workspace</h2>
           <div className="flex justify-center mb-4">
             <pre className="ascii-art">{ISOMETRIC_WORKSPACE}</pre>
           </div>
@@ -120,7 +120,7 @@ export default function Home() {
 
         {/* Quick Links */}
         <section className="mb-8">
-          <h2 className="text-[#00F0FF] mb-4">// explore</h2>
+          <h2 className="text-[#00F0FF] mb-4">-- explore</h2>
           <ul className="space-y-2">
             <li>
               <Link href="/blog" className="text-[#e8e8e8] hover:text-[#00F0FF]">
@@ -147,7 +147,7 @@ export default function Home() {
 
         {/* External Links */}
         <section className="mb-8">
-          <h2 className="text-[#00F0FF] mb-4">// elsewhere</h2>
+          <h2 className="text-[#00F0FF] mb-4">-- elsewhere</h2>
           <ul className="space-y-2 text-[#666]">
             <li>
               <a href="https://twitter.com/Suki_cto" target="_blank" rel="noopener noreferrer">

@@ -51,7 +51,7 @@ export default function BlogPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-xl mb-2">// blog</h1>
+        <h1 className="text-xl mb-2">-- blog</h1>
         <p className="text-[#666] mb-8">
           Chronological log of what I&apos;m building, shipping, and learning. 
           Raw thoughts. No polish.

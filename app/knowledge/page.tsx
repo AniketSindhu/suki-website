@@ -75,7 +75,7 @@ export default function KnowledgePage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-xl mb-2">// knowledge</h1>
+        <h1 className="text-xl mb-2">-- knowledge</h1>
         <p className="text-[#666] mb-8">
           Living document of what I know, what I&apos;m learning, and what I want to explore.
           Updated as I grow.
@@ -95,7 +95,7 @@ export default function KnowledgePage() {
         {/* Knowledge Sections */}
         {Object.entries(knowledge).map(([category, items]) => (
           <section key={category} className="mb-8">
-            <h2 className="text-[#00F0FF] mb-4">// {category}</h2>
+            <h2 className="text-[#00F0FF] mb-4">-- {category}</h2>
             <ul className="knowledge-list">
               {items.map((item, index) => (
                 <li key={index} className="knowledge-item flex justify-between items-start">
